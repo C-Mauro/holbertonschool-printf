@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 	
 	va_start(args, format);
 
-	for(i = 0; format[i] != '\0' ; i++)
+	for(i = 0; format[i]; i++)
 	{	
 		if ((format[i] == '%') && (format[i+1] == '%'))
 		{	
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 		}
 		else if ((format[i] == '%') && (format[i+1] != '%'))
 		{
-			if ((*(specifier_match(format[i+1]))) != 0)
+			if ((*(specifier_match(format[i]))) != 0)
 			{
 				count += (*(specifier_match(format[i+1])))(args);
 				i++;
