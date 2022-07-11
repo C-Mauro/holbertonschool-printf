@@ -50,6 +50,7 @@ int print_int(va_list args)
 	if (n < 0)
 	{
 		n = n * -1;
+		count++;
 		_putchar('-');
 	}
 	for(i = 1; i <= n; i = i * 10)
