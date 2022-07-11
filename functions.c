@@ -49,6 +49,7 @@ int print_int(va_list args)
 	
 	if (n == 0)
 	{
+		_putchar('0');
 		return(1);
 	}
 	if (n < 0)
