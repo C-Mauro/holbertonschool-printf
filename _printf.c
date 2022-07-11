@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 			if ((*(specifier_match(format[i+1]))) != 0)
 			{
 				count += (*(specifier_match(format[i+1])))(args);
-				i++;
+				
 			}
 			else
 			{
