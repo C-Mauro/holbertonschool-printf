@@ -8,7 +8,7 @@
 int (*specifier_match(char format))(va_list args)
 {
 	int i;
-	func_v func[]  ={
+	func_v func[]  = {
 		{'s', print_string},
 		{'c', print_char},
 		{'d', print_int},
@@ -18,7 +18,7 @@ int (*specifier_match(char format))(va_list args)
 
 	for (i = 0; func[i].letter != '\0'; i++)
 	{
-		if(func[i].letter == format)
+		if (func[i].letter == format)
 		{
 			return (func[i].f);
 		}
@@ -33,28 +33,28 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (format == NULL)
-		return(-1);
+		return (-1);
 
 	va_start(args, format);
 
-	for(i = 0; format[i]; i++)
-	{	
-		if ((format[i] == '%') && (format[i+1] == '%'))
-		{	
+	for (i = 0; format[i]; i++)
+	{
+		if ((format[i] == '%') && (format[i + 1] == '%'))
+		{
 			_putchar(format[i]);
 			count++;
 			i = i + 1;
 		}
-		else if ((format[i] == '%') && (format[i+1] != '%'))
+		else if ((format[i] == '%') && (format[i + 1] != '%'))
 		{
-			if ((*(specifier_match(format[i+1]))) != 0)
+			if ((*(specifier_match(format[i + 1]))) != 0)
 			{
-				count += (*(specifier_match(format[i+1])))(args);
+				count += (*(specifier_match(format[i + 1])))(args);
 				i++;
 			}
 			else if ((format[i] == '%') && (format[i + 1] == '\0'))
 			{
-				return(-1);
+				return (-1);
 			}
 			else
 			{
