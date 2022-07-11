@@ -14,6 +14,7 @@ int print_char(va_list args)
 
 {
 	char ch;
+
 	ch = va_arg(args, int);
 	_putchar(ch);
 
@@ -25,7 +26,7 @@ int  print_string(va_list args)
 	int i;
 	char *str;
 
-	str = va_arg(args, char*);
+str = va_arg(args, char*);
 	
 	if (str == NULL)
 	{
@@ -48,7 +49,7 @@ int print_int(va_list args)
 {
 	long int n, i, count = 0;
 
-	n = (long int)(va_arg(args, int));
+n = (long int)(va_arg(args, int));
 	
 	if (n == 0)
 	{
