@@ -46,7 +46,11 @@ int print_int(va_list args)
 {
 	long int n, i, count = 0;
 	n = (long int)(va_arg(args, int));
-
+	
+	if (n == 0)
+	{
+		return(1);
+	}
 	if (n < 0)
 	{
 		n = n * -1;
