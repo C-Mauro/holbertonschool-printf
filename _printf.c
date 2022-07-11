@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- *
- *
+ *specifier_match -seach for a specifier and call the correct function.
+ *@format: character to be evaluate.
+ *Return: 0 if is succesful.
  */
 
 int (*specifier_match(char format))(va_list args)
@@ -25,7 +26,12 @@ int (*specifier_match(char format))(va_list args)
 	}
 	return (0);
 }
-
+/**
+ *_printf -print acording to the format, like the original prinf.
+ *@format: Secuence of characters to be evaluate
+ *Return: number of bytes.
+ *
+ */
 
 int _printf(const char *format, ...)
 {
@@ -34,9 +40,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(args, format);
-
 	for (i = 0; format[i]; i++)
 	{
 		if ((format[i] == '%') && (format[i + 1] == '%'))
@@ -53,9 +57,8 @@ int _printf(const char *format, ...)
 				i++;
 			}
 			else if ((format[i] == '%') && (format[i + 1] == '\0'))
-			{
 				return (-1);
-			}
+
 			else
 			{
 				_putchar(format[i]);
@@ -70,8 +73,6 @@ int _printf(const char *format, ...)
 			count++;
 		}
 	}
-
 	va_end(args);
-	return(count);
-
+	return (count);
 }
