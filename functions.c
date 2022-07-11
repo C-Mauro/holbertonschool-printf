@@ -5,11 +5,20 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
+/**
+ * _putchar -print a char
+ * @c: character to be printed
+ * Return: character
+ */
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-
+/**
+ *print_char -print a character
+ *@args: list of arguments
+ *Return: number of bytes printed.
+ */
 int print_char(va_list args)
 
 {
@@ -20,7 +29,11 @@ int print_char(va_list args)
 
 	return (1);
 }
-
+/**
+ *print_string -print a string
+ *@args: list of arguments
+ *Return: numbert of bytes printed.
+ */
 int  print_string(va_list args)
 {
 	int i;
@@ -44,7 +57,11 @@ str = va_arg(args, char*);
 	}
 	return (i);
 }
-
+/**
+ *print_int -print integers
+ *@args: list of arguments
+ *Return: number of bytes printed
+ */
 int print_int(va_list args)
 {
 	long int n, i, count = 0;
