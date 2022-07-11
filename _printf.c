@@ -52,9 +52,9 @@ int _printf(const char *format, ...)
 				count += (*(specifier_match(format[i+1])))(args);
 				i++;
 			}
-			else if ((format[i] == '%') && (format[i + 1] == 0))
+			else if ((format[i] == '%') && (format[i + 1] == '\0'))
 			{
-				putchar('a');
+				return;
 			}
 			else
 			{
