@@ -27,7 +27,7 @@ int  print_string(va_list args)
 	char *str;
 
 str = va_arg(args, char*);
-	
+
 	if (str == NULL)
 	{
 		_putchar('(');
@@ -50,11 +50,11 @@ int print_int(va_list args)
 	long int n, i, count = 0;
 
 n = (long int)(va_arg(args, int));
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
-		return(1);
+		return (1);
 	}
 	if (n < 0)
 	{
@@ -62,15 +62,15 @@ n = (long int)(va_arg(args, int));
 		count++;
 		_putchar('-');
 	}
-	for(i = 1; i <= n; i = i * 10)
+	for (i = 1; i <= n; i = i * 10)
 	{
 		count++;
 	}
 	i = i / 10;
-	for(; i > 0; i /= 10)
+	for (; i > 0; i /= 10)
 	{
 		_putchar(((n / i) % 10) + '0');
 	}
-	return((int)count);
+	return ((int)count);
 }
 #endif
