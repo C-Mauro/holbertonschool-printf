@@ -1,13 +1,13 @@
-#include <stdarg.h>
-#include <stddef.h>
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdarg.h>
+#include <stddef.h>
 
 typedef struct functions
 {
 	char letter;
 	int (*f)(va_list args);
-}func_v;
+} func_v;
 
 int _putchar(char c);
 int print_char(va_list args);
