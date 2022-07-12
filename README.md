@@ -31,10 +31,6 @@ format.
 
 ``` gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c ```
 
-
-
-&emsp; gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
-
 #### Specifiers and the spected formats:
 
 &emsp; Always before to a specifier you have a %, so: 
