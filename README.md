@@ -45,6 +45,8 @@ format.
 
 &emsp; Note if you use **%%** only **%** it's gona be printed.
 
+<img src="https://github.com/C-Mauro/holbertonschool-printf/blob/master/flowchart.jpg?raw=true">
+
 #### Usage example
 
 &emsp; **%c**
