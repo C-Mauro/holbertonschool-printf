@@ -25,7 +25,7 @@ format.
 
 &emsp; Clone repository to your local testfile directory.
 
-```git clone https://github.com/mahdixabid/holbertonschool-printf```
+```git clone https://github.com/C-Mauro/holbertonschool-printf.git ```
 
 ### compilation:
 
